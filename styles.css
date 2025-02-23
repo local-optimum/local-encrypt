@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f1419;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+.file-drop {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #38444d;
+    border-radius: 12px;
+    background: #15202b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.file-drop.dragover {
+    border-color: #1d9bf0;
+    background: #1c2936;
+}
+
+.file-drop input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-drop span {
+    font-size: 16px;
+    color: #8b949e;
+    pointer-events: none;
+}
+
+.file-selected {
+    color: #00ff00;
+    font-weight: 600;
+}
+
+.clear-text {
+    display: none;
+    font-size: 12px;
+    color: #8b949e;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+}
+
+.clear-text:hover {
+    color: #1d9bf0;
+}
+
+.key-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.key-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.key-wrapper input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 30px;
+    background: #15202b;
+    border: 1px solid #38444d;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.key-wrapper input:focus {
+    border-color: #1d9bf0;
+}
+
+.key-wrapper input.error {
+    border-color: #f4212e;
+}
+
+.copy-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b949e;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.copy-icon:hover {
+    color: #1d9bf0;
+}
+
+.key-section button {
+    padding: 12px 20px;
+    background: #1d9bf0;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.key-section button:hover {
+    background: #1a8cd8;
+}
+
+.key-message {
+    min-height: 16px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #8b949e;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 12px;
+    background: #1d9bf0;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.actions button:hover {
+    background: #1a8cd8;
+}
+
+.progress {
+    width: 100%;
+    height: 4px;
+    background: #38444d;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress div {
+    height: 100%;
+    width: 0;
+    background: #1d9bf0;
+    transition: width 0.3s ease;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00cc88;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+}
+
+.download-btn:hover {
+    background: #00b377;
+}
+
+.tip {
+    font-size: 12px;
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+.info {
+    font-size: 12px;
+    color: #8b949e;
+    line-height: 1.5;
+}
+
+.info a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+.tip-me {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #8b949e;
+    text-align: right;
+}
+
+.sol-box {
+    display: inline-flex;
+    align-items: center;
+    background: #15202b;
+    border: 1px solid #38444d;
+    border-radius: 8px;
+    padding: 4px 12px; /* Increased padding-right for more space */
+    margin-top: 5px;
+    min-width: 160px; /* Ensures enough width for text + icon */
+}
+
+.sol-address {
+    color: #1d9bf0;
+    font-weight: 600;
+    margin-right: 8px; /* More space before the icon */
+}
+
+.sol-box .copy-icon {
+    color: #8b949e;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.sol-box .copy-icon:hover {
+    color: #1d9bf0;
+}
+
+.sol-message {
+    min-height: 16px;
+    font-size: 10px;
+    color: #8b949e;
+}

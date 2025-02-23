@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Local Encrypt</h1>
-        <p class="subtitle">Securely encrypt and decrypt files with AES-256 in your browser.<br>Filetypes restored on decryption.</p>
+        <p class="subtitle">Securely encrypt and decrypt files with AES-256 in your browser<br>filetypes restored on decryption.</p>
         <div class="file-drop" id="fileInputContainer">
             <input type="file" id="fileInput" />
             <span id="fileDropText">Drop a file here or click to upload</span>
@@ -36,14 +36,16 @@
         <p class="tip">Tip: Share your key separately (e.g., via Signal) to keep it secure.</p>
         <p class="info">Your files stay private—everything happens locally on your device, nothing leaves your machine. We use <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">AES-256-GCM</a> for encryption and <a href="https://en.wikipedia.org/wiki/PBKDF2" target="_blank">PBKDF2</a> to secure your key. <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto" target="_blank">Learn more</a> about the tech.</p>
     </div>
-    <div class="tip-me">
-        <p>Like this tool? Tip me some Sol!</p>
-        <div class="sol-box">
-            <span id="solAddress">localoptimum.sol</span>
-            <span id="copySol" class="copy-icon">⎘</span>
+    <footer class="footer">
+        <div class="footer-left">
+            <p>Local Encrypt is open source. <a href="https://github.com/local-optimum/local-encrypt" target="_blank">View the code</a>.</p>
+            <p>Follow <a href="https://blog.local-optimum.net" target="_blank">Local Optimum</a></p>
         </div>
-        <p id="solMessage" class="sol-message"></p>
-    </div>
+        <div class="footer-right">
+            <p>Like this tool? Tip me some Sol!<br><a href="#" id="solAddress">localoptimum.sol</a> <span id="copySol" class="copy-icon">⎘</span></p>
+            <p id="solMessage" class="sol-message"></p>
+        </div>
+    </footer>
     <script src="script.js"></script>
     <script src="tip.js"></script>
 </body>

@@ -9,12 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const copySolButton = document.getElementById('copySol');
     const solMessage = document.getElementById('solMessage');
 
-    // Show the full SNS address
-    solAddressElement.textContent = SOL_ADDRESS;
-
-    // Copy address to clipboard when clicking the icon
-    copySolButton.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent any default behavior
+    // Copy address to clipboard function
+    const copyAddress = (e) => {
+        e.preventDefault(); // Prevent link navigation
         navigator.clipboard.writeText(SOL_ADDRESS).then(() => {
             solMessage.textContent = 'Address copied! Send via your Solana wallet.';
             solMessage.style.color = '#00ff00';
@@ -27,5 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
             solMessage.textContent = 'Failed to copy address.';
             solMessage.style.color = '#f4212e';
         });
-    });
+    };
+
+    // Attach copy handler to both address and icon
+    solAddressElement.addEventListener('click', copyAddress);
+    copySolButton.addEventListener('click', copyAddress);
 });

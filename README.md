@@ -16,7 +16,7 @@ Welcome to **Local Encrypt**—a sleek, browser-based tool to securely encrypt a
 
 ## Get Started
 - **Run Locally**: Clone this repo, open `index.html` in your browser, and go.
-- **Live Demo**: [Coming soon—stay tuned for hosting!]
+- **Live Demo**: Try it at [encrypt.local-optimum.net](https://encrypt.local-optimum.net)!
 
 ## Built With
 - HTML, CSS, JavaScript

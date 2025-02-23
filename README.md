@@ -18,7 +18,10 @@ Welcome to **Local Encrypt**—a sleek, browser-based tool to securely encrypt a
 - **Run Locally**: Clone this repo, open `index.html` in your browser, and go.
 - **Live Demo**: [Coming soon—stay tuned for hosting!]
 
-```bash
-git clone https://github.com/local-optimum/local-encrypt.git
-cd local-encrypt
-# Open index.html in your browser
+## Built With
+- HTML, CSS, JavaScript
+- Web Crypto API for encryption
+- A sprinkle of zxcvbn for key strength
+
+## License
+This project is open-source under the MIT License (LICENSE)—feel free to use, tweak, or share it!
